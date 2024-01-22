@@ -1,1 +1,1 @@
-console.dir("app.js")
+console.dir("app.js");
