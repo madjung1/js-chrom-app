@@ -7,12 +7,23 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header>
-        <div class="">
-
+    <div id= "status" class="status-bar hidden">
+        <div class="status-bar__column">
+            <span></span>
         </div>
+        <div class="status-bar__column">
+            <span></span>
+        </div>
+        <div id="status-user" class="status-bar__column">
+            <span>123</span>
+            <button>Log-out</button>
+        </div>
+    </div>
+    <header>
+        <h1 id ="login-welcome" class="hidden">test</h1>
     </header>
-        <form id="login-form">
+    <main class="need-login">
+        <form id="login-form" class="login-form">
             <input 
                 type="text" 
                 required 
@@ -23,7 +34,13 @@
                 value="Login"
             />
         </form>
-    <h1 id ="login-welcome" class="hidden">test</h1>
+        <div class="hidden contents">
+            <div>
+                <p id="clock">clock area</p>
+            </div>
+        </div>
+    </main>
     <script src="src/app.js"></script>
+    <script src="src/clock.js"></script>
 </body>
 </html>

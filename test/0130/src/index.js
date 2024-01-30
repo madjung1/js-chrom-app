@@ -12,9 +12,6 @@ function yearCheck(){
         
     }
 };
-function string(num) {
-    toString(num);
-}
 function clock(){
     yearCheck();
     today = new Date;
@@ -25,8 +22,16 @@ function clock(){
     difMin = difMin % 60;
     let difDay = Math.floor(difHour/24);
     difHour = difHour % 24;
-    let dDayCount = `${difDay}d ${difHour}h ${difMin}m ${difSec}s`;
+
+    difHour = difHour.toString();
+    difMin = difMin.toString();
+    difSec = difSec.toString();
+    const hourPrint = difHour.padStart(2,0);
+    const minPrint = difMin.padStart(2,0);
+    const secPrint = difSec.padStart(2,0);
+
+    let dDayCount = `${difDay}d ${hourPrint}h ${minPrint}m ${secPrint}s`;
     timer.innerHTML= dDayCount
 };
-//setInterval(clock , 1000);
+setInterval(clock , 1000);
 setTimeout(clock , 1000);
