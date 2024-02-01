@@ -7,6 +7,40 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <script src="app.js"></script>
+    <div id="login-form">
+        <form>
+            <input 
+                type="text" 
+                required 
+                placeholder="Name"
+                id="user-name"
+             />
+            <input 
+                type="submit" 
+                id="user-submit"
+            />
+        </form>
+    </div>
+    <div id="momentum" class="hidden">
+        <div>
+        </div>
+        <div>
+            <div id="clockArea">
+                <h1 id="clock"></h1>
+                <h2 id="greet"></h2>
+                <h3>What is your main goal for today?</h3>
+            </div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div>
+                <a href="#" id="todo-button">Todo</a>
+            </div>
+        </div>
+    </div>
+    <script src="src/app.js"></script>
+    <script src="src/login.js"></script>
+    <script src="src/clock.js"></script>
 </body>
 </html>
