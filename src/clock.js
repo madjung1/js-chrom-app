@@ -10,4 +10,4 @@ function clock(){
     timer.innerHTML= time;
 };
 setInterval(clock , 1000);
-setTimeout(clock , 1000);
+setTimeout(clock , 0);
