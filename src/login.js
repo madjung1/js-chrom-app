@@ -8,7 +8,6 @@ var userId = null;
 function idSave(event) {
     event.preventDefault();
     userId = userName.value;
-    console.log(userId);
     idFnc.hidden(userId);
     idFnc.greet(userId);
     idFnc.setId(userId);
@@ -16,7 +15,6 @@ function idSave(event) {
 }
 function idCheck(){
     userId = localStorage.getItem("userID");
-    console.log(userId);
     if(userId===null){
         console.log(userId+"need login");
     }else{
@@ -35,7 +33,6 @@ const idFnc = {
         }
     },
     greet : function(ID) {
-        console.log(ID);
         greetText.innerHTML = `goodmoring${ID}`;
     },
     setId : function(ID){
