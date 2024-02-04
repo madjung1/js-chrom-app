@@ -21,7 +21,6 @@ const todoFnc = {
         localStorage.setItem("TD",JSON.stringify(todos));
     },
     creatTd : function(TD){
-        
         const newLi = document.createElement("li");
         const newSpan = document.createElement("span");
         newSpan.innerText = TD.text;
