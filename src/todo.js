@@ -51,7 +51,6 @@ const todoFnc = {
         const li = event.target.parentElement;
         li.remove();
         todos = todos.filter(todo => todo.id !== parseInt(li.id));
-        console.log(todos , li.id);
         localStorage.removeItem("TD");
         localStorage.setItem("TD" , JSON.stringify(todos))
     },
