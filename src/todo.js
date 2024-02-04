@@ -5,7 +5,7 @@ let deleteBtn = document.querySelectorAll("button");
 let todos=[];
 
 function todoSubmit(event){
-    event.preventDefault;
+    event.preventDefault();
     const tdValue = todoInput.value;
     todoInput.value = "";
     const newTdObj = {
@@ -21,6 +21,7 @@ const todoFnc = {
         localStorage.setItem("TD",JSON.stringify(todos));
     },
     creatTd : function(TD){
+        
         const newLi = document.createElement("li");
         const newSpan = document.createElement("span");
         newSpan.innerText = TD.text;
@@ -59,7 +60,7 @@ const todoFnc = {
 
 todoFnc.loadTd();
 todoForm.onsubmit = todoSubmit;
-const liBtn = document.querySelectorAll("button")
+const liBtn = document.querySelectorAll("ul button")
 for(var i=0; i<liBtn.length; i++){
     liBtn[i].addEventListener("click" , todoFnc.deleteTd);
 }
