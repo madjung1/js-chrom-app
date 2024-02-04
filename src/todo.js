@@ -5,8 +5,10 @@ let deleteBtn = document.querySelectorAll("button");
 let todos=[];
 
 function todoSubmit(event){
-    event.preventDefault();
+    
+    
     const tdValue = todoInput.value;
+    event.preventDefault();
     todoInput.value = "";
     const newTdObj = {
         text : tdValue,
